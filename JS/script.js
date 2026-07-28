@@ -86,7 +86,7 @@ themeBtn.addEventListener("click", () => {
     dark = !dark;
 
 });
-
+const isLight = document.body.classList.contains("light-mode");
 /* ===========================
    STICKY HEADER SHADOW
 =========================== */

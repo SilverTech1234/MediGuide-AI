@@ -10,6 +10,7 @@ GOOGLE FONT
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
     background: #08121f;
     color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;    
 }
 
 /*==============================
@@ -246,9 +248,19 @@ body.light-mode nav a{
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 420px;
     align-items: center;
     gap: 60px;
+}
+
+.hero-chat {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
 }
 
 .hero-badge {
@@ -341,10 +353,7 @@ AI CARD
 ==============================*/
 
 .ai-card {
-    position: absolute;
-    top: 100px;
-    right: 30px;
-    z-index: 10;
+    position: relative;
     width: 320px;
     padding: 22px;
     border-radius: 22px;
@@ -536,19 +545,13 @@ AI CARD
 }
 
 .stats {
-
-    padding: 40px 0 80px;
-
+    padding: 100px 0;
 }
 
 .stats-grid {
-
     display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
-
 }
 
 .stat-card {

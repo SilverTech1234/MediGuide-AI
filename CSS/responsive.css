@@ -114,6 +114,33 @@
 /* ==========================
    MOBILE
 ========================== */
+@media (max-width: 768px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-ai {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ai-card {
+        position: relative;
+        top: 0;
+        right: 0px;
+        left: 10px;
+        width: min(100%, 340px);
+    }
+
+}
 
 @media (max-width:500px) {
 

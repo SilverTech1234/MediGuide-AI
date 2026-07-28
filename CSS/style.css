@@ -206,7 +206,7 @@ HERO
 }
 /* light mode */
 body.light-mode .hero {
-    background: linear-gradient(rgba(14, 56, 133, 0.78),rgba(255, 255, 255, .82)), url("../images/real.png");
+    background: linear-gradient(rgba(15, 80, 199, 0.78),rgba(255, 255, 255, .82)), url("../images/real.png");
     background-size: cover;
     background-position: center;
 

@@ -69,25 +69,21 @@ const themeBtn = document.getElementById("theme-toggle");
 
 let dark = true;
 
-themeBtn.addEventListener("click",()=>{
+themeBtn.addEventListener("click", () => {
 
-    if(dark){
+    document.body.classList.toggle("light-mode");
 
-        document.body.style.background="#f4f7fb";
-        document.body.style.color="#111";
+    if (dark) {
 
-        themeBtn.innerHTML='<i class="fa-solid fa-sun"></i>';
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
 
-    }else{
+    } else {
 
-        document.body.style.background="#08121f";
-        document.body.style.color="#fff";
-
-        themeBtn.innerHTML='<i class="fa-solid fa-moon"></i>';
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
 
     }
 
-    dark=!dark;
+    dark = !dark;
 
 });
 
@@ -205,5 +201,51 @@ topBtn.addEventListener("click",()=>{
         behavior:"smooth"
 
     });
+
+});
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+    const update = () => {
+
+        const target = +counter.dataset.target;
+
+        const count = +counter.innerText;
+
+        const increment = target / 120;
+
+        if (count < target) {
+
+            counter.innerText = Math.ceil(count + increment);
+
+            setTimeout(update, 20);
+
+        } else {
+
+            if (target >= 1000000) {
+
+                counter.innerText = "1M+";
+
+            } else if (target >= 10000) {
+
+                counter.innerText = "10K+";
+
+            } else if (target === 98) {
+
+                counter.innerText = "98%";
+
+            } else {
+
+                counter.innerText = target + "+";
+
+            }
+
+        }
+
+    };
+
+    update();
 
 });

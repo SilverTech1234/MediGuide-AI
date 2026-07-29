@@ -249,3 +249,95 @@ counters.forEach(counter => {
     update();
 
 });
+
+const toast = document.getElementById("toast");
+const toastMessage = document.getElementById("toastMessage");
+
+const botReply = document.getElementById("botReply");
+const userRequest = document.getElementById("userRequest");
+const aiStatus = document.getElementById("aiStatus");
+
+function showToast(message){
+
+    toastMessage.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(()=>{
+
+        toast.classList.remove("show");
+
+    },3000);
+
+}
+
+document.getElementById("getStartedBtn").addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
+    showToast("Generating your personalized AI dashboard...");
+
+    botReply.textContent = "Analyzing your learning goals...";
+
+    aiStatus.textContent = "⏳ Preparing AI dashboard...";
+
+    setTimeout(()=>{
+
+        botReply.textContent = "Welcome! Your study assistant is ready.";
+
+        aiStatus.textContent = "✅ Dashboard generated successfully.";
+
+        document.getElementById("features").scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+    },2500);
+
+});
+
+document.getElementById("generateBtn").addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
+    userRequest.textContent = "Generate a Physiology quiz.";
+    aiStatus.classList.remove("typing");
+    aiStatus.innerHTML = `
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        Generating AI Quiz...
+    `;
+
+    generateBtn.disabled = true;
+    generateBtn.textContent = "Generating...";
+
+    setTimeout(()=>{
+
+        aiStatus.innerHTML = `
+            <i class="fa-solid fa-circle-check"></i>
+            <strong>📘 Quiz Ready!</strong><br>
+            • 20 Multiple Choice Questions<br>
+            • Topic: Physiology<br>
+            • Difficulty: Intermediate
+        `;
+
+        generateBtn.disabled = false;
+        generateBtn.textContent = "Generate Quiz";
+
+        showToast("20 AI questions generated successfully!");
+
+    },3000);
+
+});
+
+document.getElementById("exploreBtn").addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
+    document.getElementById("features").scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+});

@@ -113,13 +113,13 @@
             
                 <div class="hero-buttons">
             
-                    <a href="#" class="btn-primary">
+                    <a href="#" class="btn-primary" id="getStartedBtn">
             
                         Get Started
             
                     </a>
             
-                    <a href="#" class="btn-secondary">
+                    <a href="#" class="btn-secondary" id="exploreBtn">
             
                         Explore Features
             
@@ -165,27 +165,27 @@
             
                         </div>
             
-                        <div class="bot-message">
+                        <div class="bot-message" id="botReply">
             
                             Ready to study Anatomy today?
             
                         </div>
             
-                        <div class="user-message">
+                        <div class="user-message" id="userRequest">
             
                             Generate cranial nerve flashcards.
             
                         </div>
             
-                        <div class="bot-message typing">
+                        <div class="bot-message typing" id="aiStatus">
             
-                            ✅ Creating 20 AI flashcards...
+                            Creating 20 AI flashcards..
             
                         </div>
             
                     </div>
             
-                    <button class="generate-btn">
+                    <button class="generate-btn" id="generateBtn">
                         Generate Quiz            
                     </button>
             
@@ -554,6 +554,10 @@
 
     <script src="JS/script.js"></script>
 
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage"></span>
+    </div>
 </body>
 
 </html>

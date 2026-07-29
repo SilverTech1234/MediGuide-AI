@@ -1,6 +1,4 @@
-/* ===========================
-   MOBILE MENU
-=========================== */
+/* MOBILE MENU */
 
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
@@ -13,9 +11,7 @@ menuBtn.addEventListener("click", () => {
         : '<i class="fa-solid fa-bars"></i>';
 });
 
-/* ===========================
-   CLOSE MENU WHEN LINK IS CLICKED
-=========================== */
+/* CLOSE MENU WHEN LINK IS CLICKED */
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
@@ -30,9 +26,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 });
 
-/* ===========================
-   FAQ ACCORDION
-=========================== */
+/* FAQ ACCORDION */
 
 const questions = document.querySelectorAll(".faq-question");
 

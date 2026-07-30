@@ -107,72 +107,56 @@ HEADER
 ==============================*/
 
 .header {
-
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
-    background: #091423;
+    background: transparent;
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, .08);
-
 }
 
 .navbar {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-
 }
 
 .logo {
-
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
     color: #0ea5e9;
-
 }
 
 .logo i {
-
     font-size: 2rem;
-
 }
 
 .nav-links {
-
     display: flex;
     gap: 35px;
-
 }
 
 .nav-links a {
-
     color: white;
     transition: .3s;
-
 }
 
 .nav-links a:hover {
-
     color: #0ea5e9;
-
 }
 
 .nav-buttons {
-
     display: flex;
     align-items: center;
     gap: 20px;
-
 }
 
 #theme-toggle {
-
     width: 45px;
     height: 45px;
     border: none;
@@ -183,11 +167,9 @@ HEADER
 }
 
 .menu-btn {
-
     display: none;
     font-size: 1.8rem;
     cursor: pointer;
-
 }
 
 /*==============================
